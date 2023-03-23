@@ -94,6 +94,7 @@ class signup(View):
             return render(request, 'signup.html', data)
 
     def validateuser(self, user):
+        error_message = None
         if (not user.firstname):
             error_message = "First Name Required !!"
         elif len(user.firstname) < 4:
